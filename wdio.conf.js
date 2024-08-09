@@ -20,11 +20,11 @@ exports.config = {
 ],
     logLevel: 'error',
     bail: 0,
-    baseUrl: 'https://cnt-60e08a82-8dad-4883-85c6-02ada2058c5a.containerhub.tripleten-services.com',
+    baseUrl: 'https://cnt-0591b301-0127-467b-ae2d-85d8564cb29a.containerhub.tripleten-services.com',
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: [ 
+    services: [
         'geckodriver', 
         'intercept', 
     ],
