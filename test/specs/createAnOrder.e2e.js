@@ -38,7 +38,7 @@ describe('Create an order', () => {
         const linkButton = await $(".pp-buttons :nth-child(1)");
         await linkButton.click();
         const addedCard = await $("div.pp-selector > div:nth-child(3) > .pp-title");
-        await expect(addedCard).toHaveValue("Card");
+        await expect(addedCard).toHaveText("Card");
 
     })
 
@@ -69,7 +69,7 @@ describe('Create an order', () => {
         const plusCounter = await $(".counter-plus");
         await plusCounter.click();
         await plusCounter.click();
-        await expect($(".counter-value")).toHaveValue("2");
+        await expect($(".counter-value")).toHaveText("2");
 
     })
 
