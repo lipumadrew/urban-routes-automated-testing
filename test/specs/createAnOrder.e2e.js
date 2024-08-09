@@ -38,7 +38,7 @@ describe('Create an order', () => {
         const linkButton = await $(".pp-buttons :nth-child(1)");
         await linkButton.click();
         const addedCard = await $("div.pp-selector > div:nth-child(3) > .pp-title");
-        expect(addedCard).toHaveValue("Card");
+        await expect(addedCard).toHaveValue("Card");
 
     })
 
@@ -55,7 +55,7 @@ describe('Create an order', () => {
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
         const driverMessage = $("#comment");
         await driverMessage.setValue("Please drive carefully");
-        expect(driverMessage).toHaveValue("Please drive carefully");
+        await expect(driverMessage).toHaveValue("Please drive carefully");
     })
 
     it('should be able to order a blanket and hankerchiefs', async () => {
@@ -69,7 +69,7 @@ describe('Create an order', () => {
         const plusCounter = await $(".counter-plus");
         await plusCounter.click();
         await plusCounter.click();
-        expect($(".counter-value")).toHaveValue("2");
+        await expect($(".counter-value")).toHaveValue("2");
 
     })
 
@@ -78,13 +78,13 @@ describe('Create an order', () => {
         await orderButton.click();
         const orderModal = await $(".order-body");
         await orderModal.waitForDisplayed();
-        expect(orderModal).toBeDisplayed();
+        await expect(orderModal).toBeDisplayed();
     })
 
     it('should display driver info in the modal', async () => {
         const orderHeader = await $(".order-header-content");
         await orderHeader.waitForDisplayed();
-        expect(orderHeader).toBeDisplayed();
+        await expect(orderHeader).toBeDisplayed();
         
     })
 })
