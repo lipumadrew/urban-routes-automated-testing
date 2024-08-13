@@ -58,7 +58,7 @@ describe("Create an order", () => {
   it("should be able to order a blanket and hankerchiefs", async () => {
     const firstSlider = $(".slider.round");
     await firstSlider.click();
-    expect(firstSlider).toBeEnabled();
+    await expect(firstSlider).toBeEnabled();
   });
 
   it("should be able to order 2 ice cream buckets", async () => {
