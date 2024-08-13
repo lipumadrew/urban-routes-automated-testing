@@ -12,7 +12,7 @@ exports.config = {
       browserName: "chrome",
       acceptInsecureCerts: true,
       "goog:chromeOptions": {
-        args: [], //headless and disable-gpu for when submitting and DELETE THIS COMMENT
+        args: ["headless", "disable-gpu"],
       },
     },
   ],
