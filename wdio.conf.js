@@ -12,14 +12,14 @@ exports.config = {
       browserName: "chrome",
       acceptInsecureCerts: true,
       "goog:chromeOptions": {
-        args: [],
+        args: ["headless", "disable-gpu"],
       },
     },
   ],
   logLevel: "error",
   bail: 0,
   baseUrl:
-    "https://cnt-41bd01a8-e377-4363-9bcf-5d8378f62bf8.containerhub.tripleten-services.com",
+    "https://cnt-6e7ba964-3c1c-4f28-ae66-9421664516bc.containerhub.tripleten-services.com",
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
