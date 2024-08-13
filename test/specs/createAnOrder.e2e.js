@@ -58,9 +58,12 @@ describe("Create an order", () => {
   it("should be able to order a blanket and hankerchiefs", async () => {
     const firstSlider = $(".slider.round");
     await firstSlider.click();
+    expect(firstSlider).toBeEnabled();
   });
 
   it("should be able to order 2 ice cream buckets", async () => {
+    await browser.url(`/`);
+    await page.fillAddresses("East 2nd Street, 601", "1300 1st St");
     const plusCounter = await $(".counter-plus");
     await plusCounter.click();
     await plusCounter.click();
@@ -68,6 +71,8 @@ describe("Create an order", () => {
   });
 
   it("should open the car search modal", async () => {
+    await browser.url(`/`);
+    await page.fillAddresses("East 2nd Street, 601", "1300 1st St");
     const orderButton = await $(".smart-button");
     await orderButton.click();
     const orderModal = await $(".order-body");
@@ -76,7 +81,11 @@ describe("Create an order", () => {
   });
 
   it("should display driver info in the modal", async () => {
+    await browser.url(`/`);
+    await page.fillAddresses("East 2nd Street, 601", "1300 1st St");
     const orderHeader = await $(".order-header-content");
+    const orderButton = await $(".smart-button");
+    await orderButton.click();
     await orderHeader.waitForDisplayed();
     await expect(orderHeader).toBeDisplayed();
   });

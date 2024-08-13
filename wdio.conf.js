@@ -12,14 +12,14 @@ exports.config = {
       browserName: "chrome",
       acceptInsecureCerts: true,
       "goog:chromeOptions": {
-        args: ["headless", "disable-gpu"],
+        args: [], //headless and disable-gpu for when submitting and DELETE THIS COMMENT
       },
     },
   ],
   logLevel: "error",
   bail: 0,
   baseUrl:
-    "https://cnt-51bf36a0-fb33-4b52-b9ff-a78abe6b7297.containerhub.tripleten-services.com",
+    "https://cnt-97d3e0e2-1e61-4130-8e59-3aba1ccce937.containerhub.tripleten-services.com",
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
