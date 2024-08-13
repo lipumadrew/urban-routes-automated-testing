@@ -15,10 +15,10 @@ describe("Create an order", () => {
   it("should select the supportive plan", async () => {
     await browser.url("/");
     await page.fillAddresses("East 2nd Street, 601", "1300 1st St");
-    const supportiveButton = await $(".tariff-cards>:nth-child(5)"); //Should select the supportive car option
+    const supportiveButton = await $(".tariff-cards>:nth-child(5)");
     await supportiveButton.waitForDisplayed();
     await supportiveButton.click();
-    await expect(supportiveButton).toHaveElementClassContaining("tcard active"); //Checks to see if the supportive car option is active once clicked
+    await expect(supportiveButton).toHaveElementClassContaining("tcard active");
   });
 
   it("should add a card as a payment method", async () => {
