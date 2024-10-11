@@ -1,4 +1,4 @@
-# Sprint 8 Project: Urban Routes Automated Testing
+# Urban Routes Automated Testing
 
 This project is an exploration of the automated testing of the Urban Routes app.
 
